@@ -1,0 +1,3 @@
+Flask      # or your version
+gunicorn  # or similar
+firebase-admin

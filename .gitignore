@@ -1,0 +1,80 @@
+# ============================================================
+#  SECRETS — NEVER COMMIT THESE
+# ============================================================
+.env
+*.env
+.env.*
+!.env.example
+
+# Real Rithmic + Heroku credentials — use Config.secrets.example.cs as template
+vps/config.secrets.cs
+vps/Config.secrets.cs
+
+# Firebase / Google Cloud service account keys
+firebase-*.json
+*-firebase-adminsdk-*.json
+google-credentials*.json
+service-account*.json
+
+# ============================================================
+#  PYTHON
+# ============================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.pyo
+venv/
+.venv/
+env/
+.env/
+
+# ============================================================
+#  C# / .NET
+# ============================================================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+.vs/
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.VC.opendb
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# ============================================================
+#  EDITOR / OS
+# ============================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
