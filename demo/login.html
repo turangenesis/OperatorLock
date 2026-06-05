@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OperatorLock — Operator Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0; min-height: 100vh;
+      background: radial-gradient(1200px 600px at 50% -10%, #16241b 0%, #111111 55%);
+      color: #eeeeee;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%; max-width: 380px;
+      background: #181818; border: 1px solid #2a2a2a; border-radius: 16px;
+      padding: 32px 28px 26px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 4px;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: #22c55e; box-shadow: 0 0 12px #22c55e;
+    }
+    .brand h1 { font-size: 20px; font-weight: 800; margin: 0; letter-spacing: 0.3px; }
+    .subtitle { font-size: 13px; color: #9aa0a6; margin: 2px 0 22px 20px; }
+    label { display: block; font-size: 12px; color: #9aa0a6; margin: 0 0 6px 2px; }
+    input[type="password"], input[type="text"] {
+      width: 100%; padding: 12px 14px; font-size: 15px;
+      background: #0d0d0d; color: #eee;
+      border: 1px solid #333; border-radius: 10px; outline: none;
+      transition: border-color 0.15s ease;
+    }
+    input:focus { border-color: #22c55e; }
+    button {
+      width: 100%; margin-top: 16px; padding: 12px 14px;
+      font-size: 15px; font-weight: 700; color: #06210f;
+      background: #22c55e; border: none; border-radius: 10px; cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    button:hover { background: #34d36b; }
+    .note {
+      margin-top: 18px; padding: 12px 14px;
+      background: rgba(245,158,11,0.10); border: 1px solid rgba(245,158,11,0.35);
+      border-radius: 10px; font-size: 12px; line-height: 1.5; color: #f0c98a;
+    }
+    .back { display: block; text-align: center; margin-top: 16px; font-size: 13px; color: #9aa0a6; text-decoration: none; }
+    .back:hover { color: #eee; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>OperatorLock</h1>
+    </div>
+    <p class="subtitle">Execution Console — Operator Access</p>
+
+    <form id="login-form" autocomplete="off">
+      <label for="pw">Operator password</label>
+      <input id="pw" type="password" placeholder="••••••••••" autofocus>
+      <button type="submit">Sign in</button>
+    </form>
+
+    <div class="note">
+      <strong>Demo environment.</strong> In the live system, the operator authenticates
+      here before the console unlocks. This is a public demo — enter anything (or nothing)
+      to continue. No real credentials are stored or transmitted.
+    </div>
+
+    <a class="back" href="index.html">← Return to console</a>
+  </div>
+
+  <script>
+    // Any input (or none) signs back into the demo console.
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
