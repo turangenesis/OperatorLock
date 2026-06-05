@@ -1,6 +1,11 @@
 # OperatorLock
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-online-brightgreen?style=for-the-badge)](https://turangenesis.github.io/OperatorLock/) &nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
 **A behavioral risk-control and execution infrastructure system for high-pressure financial environments.**
+
+> ### ▶ [**Try the live interactive demo →**](https://turangenesis.github.io/OperatorLock/)
+> A fully simulated walkthrough of the operator console — watch every constraint (5-minute candle lock, 180-second post-exit cooldown, tempo token, zone entry gate, daily trade limit) fire in real time. **No login, backend, or API keys required.** See [demo/](demo/) for details.
 
 OperatorLock enforces structural discipline on a futures trading operator through hard gates, temporal locks, and cooldown periods that cannot be overridden in the heat of the moment. It is not a prediction engine, signal generator, or automated trading strategy. The system's job is to make impulsive behavior physically impossible — protecting the operator from themselves when discipline is most likely to fail.
 
