@@ -8,6 +8,10 @@
 
 OperatorLock enforces structural discipline on a futures trading operator through hard gates, temporal locks, and cooldown periods that cannot be overridden in the heat of the moment. It is not a prediction engine, signal generator, or automated trading strategy. The system's job is to make impulsive behavior physically impossible — protecting the operator from themselves when discipline is most likely to fail.
 
+**Status:** Ran live for roughly six months against real Rithmic execution (a Windows VPS bridge over RAPI+), with every constraint enforced server-side. Across the live run the operator never blew up the account, which is the catastrophic failure the system exists to prevent. It is now offline; the hosted [live demo](https://turangenesis.github.io/OperatorLock/) is a self-contained simulation of the console.
+
+**What it proved:** Hard behavioral constraints can prevent disaster, but they impose a human cost so high that the discipline becomes unsustainable. That trade-off between protection and sustainability was the project's central finding.
+
 ---
 
 ## The Problem

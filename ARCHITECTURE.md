@@ -1,6 +1,6 @@
-# CLAUDE.md
+# OperatorLock — Architecture & Engineering Notes
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Architecture and engineering reference for OperatorLock: running the app, module layout, state ownership, the constraint layer, and repo conventions.
 
 ## Running the Backend
 
