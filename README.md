@@ -10,7 +10,7 @@ OperatorLock enforces structural discipline on a futures trading operator throug
 
 **Status:** Ran live for roughly six months against real Rithmic execution (a Windows VPS bridge over RAPI+), with every constraint enforced server-side. Across the live run the operator never blew up the account, which is the catastrophic failure the system exists to prevent. It is now offline; the hosted [live demo](https://turangenesis.github.io/OperatorLock/) is a self-contained simulation of the console.
 
-**What it proved:** Hard behavioral constraints can prevent disaster, but they impose a human cost so high that the discipline becomes unsustainable. That trade-off between protection and sustainability was the project's central finding.
+**What it proved:** Hard behavioral constraints can prevent disaster, but they impose a human cost so high that the discipline becomes unsustainable. That trade-off between protection and sustainability was the project's central finding. The same constraint-versus-cost inversion shows up in AgentGuard, a companion project on AI-agent oversight, where past a point more control makes a system less safe.
 
 ---
 
