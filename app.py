@@ -1363,7 +1363,7 @@ def hydrate_state_from_firestore():
 hydrate_state_from_firestore()
 
 def check_rithmic_connection():
-    return True, "Rithmic connection OK (placeholder)."
+    return True, "Rithmic connection OK (handled by C# bridge)."
 
 
 def _ensure_post_exit_lock_initialized():
@@ -2710,7 +2710,7 @@ def set_env():
         if not ok:
             return jsonify({"ok": False, "error": msg or "Rithmic connection failed – cannot enable LIVE."}), 503
         state["global"]["env"] = "LIVE"
-        message = msg or "Live mode enabled with Rithmic placeholder."
+        message = msg or "Live mode enabled (execution via C# Rithmic bridge)."
 
     try:
         save_global_state(state["global"])

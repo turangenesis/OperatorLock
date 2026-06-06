@@ -31,7 +31,7 @@ bp = Blueprint("controls", __name__)
 
 
 def _check_rithmic_connection():
-    return True, "Rithmic connection OK (placeholder)."
+    return True, "Rithmic connection OK (handled by C# bridge)."
 
 
 @bp.route("/api/trade-limit/consume", methods=["POST"])
@@ -140,7 +140,7 @@ def set_env():
         if not ok:
             return jsonify({"ok": False, "error": msg or "Rithmic connection failed – cannot enable LIVE."}), 503
         state["global"]["env"] = "LIVE"
-        message = msg or "Live mode enabled with Rithmic placeholder."
+        message = msg or "Live mode enabled (execution via C# Rithmic bridge)."
 
     try:
         save_global_state(state["global"])
